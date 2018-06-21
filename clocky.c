@@ -17,6 +17,11 @@ void clocky_init()
 		s_freq = val.QuadPart;
 	}
 #else
+	struct timespec res;
+	if (clock_getres(CLOCK_MONOTONIC, &res) == 0)
+	{
+		s_freq = (uint64_t)(res.tv_sec + (res.tv_nsec * 1000000000));
+	}
 #endif
 }
 
@@ -35,7 +40,12 @@ uint64_t clocky_get_timestamp()
 	}
 	return 0;
 #else
-	return 0;
+	struct timespec val;
+	if (clock_gettime(CLOCK_MONOTONIC, &val) == 0)
+	{
+		const uint64_t whole_nsec = (uint64_t)val.tv_sec * 1000000000;
+		return whole_nsec + (uint64_t)val.tv_nsec;
+	}
 #endif
 }
 
@@ -53,5 +63,9 @@ void clocky_sleep(int milliseconds)
 #ifdef _WIN32
 	Sleep(milliseconds);
 #else
+	struct timespec interval;
+	interval.tv_sec = 0;
+	interval.tv_nsec = milliseconds * 1000000;
+	nanosleep(&interval, NULL);
 #endif
 }

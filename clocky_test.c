@@ -38,7 +38,7 @@ int main(int argc, char* argv[])
 	clocky_sleep(250);
 	const uint64_t timestamp_b = clocky_get_timestamp();
 	check_test(timestamp_b > timestamp_a, "clocky_get_timestamp() => timestamp_b: returns greater than timestamp_a");
-	
+
 	const uint64_t quarter_freq = (uint64_t)(freq * 0.25);
 	const uint64_t quarter_freq_error = (uint64_t)(quarter_freq * 0.05);
 	const uint64_t range_lo = quarter_freq - quarter_freq_error;
