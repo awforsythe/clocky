@@ -14,6 +14,9 @@ uint64_t clocky_get_freq();
 /** Returns a timestamp value representing the current time. */
 uint64_t clocky_get_timestamp();
 
+/** Returns the current clock time in seconds. */
+double clocky_get_time();
+
 /** Returns the real time elapsed between two timestamps, in seconds. */
 double clocky_get_elapsed(uint64_t from_timestamp, uint64_t to_timestamp);
 

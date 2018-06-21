@@ -49,6 +49,15 @@ uint64_t clocky_get_timestamp()
 #endif
 }
 
+double clocky_get_time()
+{
+	if (s_freq)
+	{
+		return (double)clocky_get_timestamp() / s_freq;
+	}
+	return 0.0;
+}
+
 double clocky_get_elapsed(uint64_t from_timestamp, uint64_t to_timestamp)
 {
 	if (s_freq)
