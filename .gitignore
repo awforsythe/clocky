@@ -1,0 +1,5 @@
+bin/*
+obj/*
+build/.vs/*
+build/*.vcxproj.user
+clocky_test

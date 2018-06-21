@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "clocky", "clocky.vcxproj", "{D034817A-E03C-4D55-812A-A368B0370F57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D034817A-E03C-4D55-812A-A368B0370F57}.Debug|x64.ActiveCfg = Debug|x64
+		{D034817A-E03C-4D55-812A-A368B0370F57}.Debug|x64.Build.0 = Debug|x64
+		{D034817A-E03C-4D55-812A-A368B0370F57}.Release|x64.ActiveCfg = Release|x64
+		{D034817A-E03C-4D55-812A-A368B0370F57}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {043701E4-A340-4B4E-9EDB-15705B8D4F8C}
+	EndGlobalSection
+EndGlobal
