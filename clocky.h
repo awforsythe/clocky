@@ -5,6 +5,10 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /** Initializes the library: should be called before any other clocky functions. No cleanup is required. */
 void clocky_init();
 
@@ -22,3 +26,7 @@ double clocky_get_elapsed(uint64_t from_timestamp, uint64_t to_timestamp);
 
 /** Suspends execution of the calling thread for the specified interval. */
 void clocky_sleep(int milliseconds);
+
+#ifdef __cplusplus
+}
+#endif
